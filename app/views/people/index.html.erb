@@ -1,0 +1,20 @@
+<h3><%= @person.name %></h3>
+<img src="<%= @person.image %>" alt=""/>
+
+<details open>
+<summary>See what other people said</summary>
+<ul>
+    <% @compliments.each do |c| %>
+        <li>
+            <%= c.id %>
+            <%= c.body %>
+        </li>
+    <% end %>
+</ul>
+</details>
+
+<%= form_with model: [@person, @new_compliment] do |f| %>
+    <%= f.text_area :body %>
+    <%= f.text_field :attribution %>
+    <%= f.submit %>
+<% end %>
