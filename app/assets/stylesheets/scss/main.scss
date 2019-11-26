@@ -6,6 +6,7 @@ $green: #44714A;
 
 *{
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -40,17 +41,66 @@ h2{
     text-shadow: 5px 5px 0px $green;
 }
 
-.panel{
+.form-panel{
     background: $pale;
     border-radius: 5px;
     box-shadow: 5px 5px 0px $green;
     color: $green;
     max-width: 500px;
     margin: 0 auto;
+    padding: 20px;
+    .field{
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    label{
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type=text], textarea{
+        background: none;
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid $green;
+        padding: 10px;
+        font-size: 1em;
+        color: $green;
+    }
 }
 
 .button{
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: $pale;
+    background: $green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     &:hover{
+        background-size: cover;
+        background-position: bottom;
         background-image: url('/sunrise.gif')
     }
+}
+
+.good-bios{
+    list-style: none;
+    padding: 0px;
+    li{
+        margin-bottom: 40px;
+        font-size: 1.2em;
+        font-weight: 800;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+}
+
+
+.footer{
+    padding: 20px;
 }

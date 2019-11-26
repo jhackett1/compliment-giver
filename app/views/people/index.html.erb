@@ -28,7 +28,7 @@
 
 <h2>Isn't that nice</h2>
 
-<%= form_with model: [@person, @new_compliment], class: "panel" do |f| %>
+<%= form_with model: [@person, @new_compliment], class: "form-panel" do |f| %>
     <div class="field">
         <%= f.label :body, "Write them a nice bio:" %>
         <%= f.text_area :body %>
@@ -42,7 +42,7 @@
 
 <h2>Good bios are...</h2>
 
-<ul>
+<ul class="good-bios">
     <li><%= image_tag "unusual.svg" %>Unusual</li>
     <li><%= image_tag "positive.svg" %>Overwhelmingly positive</li>
     <li><%= image_tag "specific.svg" %>Specific</li>
