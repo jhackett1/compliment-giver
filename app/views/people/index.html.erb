@@ -1,20 +1,47 @@
-<h3><%= @person.name %></h3>
-<img src="<%= @person.image %>" alt=""/>
+<header>
+    <nav>
+        <a href="#">I want compliments too!</a>
+    </nav>
+</header>
 
+<h1>Product team compliment giver</h1>
+<p>They say negative feedback is more useful, but not here ❤️</p>
+
+<h2>You've got...</h2>
+
+<section>
+    <h3><%= @person.name %></h3>
+    <p><%= @person.role %></p>
+    <img src="<%= @person.image %>" alt=""/>
+</section>
 <details open>
 <summary>See what other people said</summary>
 <ul>
     <% @compliments.each do |c| %>
         <li>
-            <%= c.id %>
             <%= c.body %>
+            <%= c.attribution %>
         </li>
     <% end %>
 </ul>
 </details>
+
+<h2>Isn't that nice</h2>
 
 <%= form_with model: [@person, @new_compliment] do |f| %>
     <%= f.text_area :body %>
     <%= f.text_field :attribution %>
     <%= f.submit %>
 <% end %>
+
+<h2>Good bios are...</h2>
+
+<ul>
+    <li>Unusual</li>
+    <li>Overwhelmingly positive</li>
+    <li>Specific</li>
+</ul>
+
+<footer>
+Jaye made this, and apologises
+</footer>
