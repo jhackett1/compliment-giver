@@ -5,14 +5,14 @@
 </header>
 
 <h1>Product team compliment giver</h1>
-<p>They say negative feedback is more useful, but not here ❤️</p>
+<p class="tagline">They say negative feedback is more useful, but not here ❤️</p>
 
 <h2>You've got...</h2>
 
-<section>
+<section class="panel">
+    <img src="<%= @person.image %>" alt=""/>
     <h3><%= @person.name %></h3>
     <p><%= @person.role %></p>
-    <img src="<%= @person.image %>" alt=""/>
 </section>
 <details open>
 <summary>See what other people said</summary>
