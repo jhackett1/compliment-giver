@@ -28,10 +28,16 @@
 
 <h2>Isn't that nice</h2>
 
-<%= form_with model: [@person, @new_compliment] do |f| %>
-    <%= f.text_area :body %>
-    <%= f.text_field :attribution %>
-    <%= f.submit %>
+<%= form_with model: [@person, @new_compliment], class: "panel" do |f| %>
+    <div class="field">
+        <%= f.label :body, "Write them a nice bio:" %>
+        <%= f.text_area :body %>
+    </div>
+    <div class="field">
+        <%= f.label :attribution, "If you like, tell them who left it:" %>
+        <%= f.text_field :attribution %>
+    </div>
+    <%= f.submit "Brighten their day", class: "button" %>
 <% end %>
 
 <h2>Good bios are...</h2>
