@@ -48,3 +48,9 @@ h2{
     max-width: 500px;
     margin: 0 auto;
 }
+
+.button{
+    &:hover{
+        background-image: url('/sunrise.gif')
+    }
+}
