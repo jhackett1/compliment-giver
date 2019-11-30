@@ -9,21 +9,24 @@
 
 <h2>You've got...</h2>
 
-<section class="panel">
+<section class="person-panel">
     <img src="<%= @person.image %>" alt=""/>
-    <h3><%= @person.name %></h3>
-    <p><%= @person.role %></p>
+    <div class="deets">
+        <h3><%= @person.name %></h3>
+        <p><%= @person.role %></p>
+    </div>
 </section>
+
 <details open>
-<summary>See what other people said</summary>
-<ul>
-    <% @compliments.each do |c| %>
-        <li>
-            <%= c.body %>
-            <%= c.attribution %>
-        </li>
-    <% end %>
-</ul>
+    <summary>See what other people said</summary>
+    <ul>
+        <% @compliments.each do |c| %>
+            <li>
+                <%= c.body %>
+                <%= c.attribution %>
+            </li>
+        <% end %>
+    </ul>
 </details>
 
 <h2>Isn't that nice</h2>
