@@ -1,6 +1,6 @@
 <header>
     <nav>
-        <a href="#">I want compliments too!</a>
+        <%= link_to "Sign in to get compliments!", person_google_oauth2_omniauth_authorize_path %>
     </nav>
 </header>
 
@@ -34,7 +34,7 @@
 <%= form_with model: [@person, @new_compliment], class: "form-panel" do |f| %>
     <div class="field">
         <%= f.label :body, "Write them a nice bio:" %>
-        <%= f.text_area :body %>
+        <%= f.text_area :body, required: true %>
     </div>
     <div class="field">
         <%= f.label :attribution, "If you like, tell them who left it:" %>
