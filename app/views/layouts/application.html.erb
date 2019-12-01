@@ -14,7 +14,6 @@
       <nav>
           <% if current_person %>
             <%= link_to "My compliments", me_path %>
-            <%= link_to "Sign out (don't worry, you'll still get compliments)", destroy_person_session_path, method: :delete %>
           <% else %>
             <%= link_to "Sign in to start getting compliments!", person_google_oauth2_omniauth_authorize_path %>
           <% end %>
