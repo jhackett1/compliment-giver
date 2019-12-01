@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+          <% if current_person %>
+            <%= link_to "My compliments", me_path %>
+            <%= link_to "Sign out", destroy_person_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign in to get compliments!", person_google_oauth2_omniauth_authorize_path %>
+          <% end %>
+      </nav>
+    </header>
     <%= yield %>
+    <footer>Jaye made this, and apologises</footer>
   </body>
 </html>

@@ -1,0 +1,24 @@
+<a class="back" href="/">👈 Go back</a>
+
+<section class="person-panel">
+    <img src="<%= @person.image %>" alt=""/>
+    <div class="deets">
+        <h3><%= @person.name %></h3>
+        <p><%= @person.email %></p>
+    </div>
+</section>
+
+<h2>Your lovely compliments</h2>
+
+<% if @compliments.any? %>
+    <ul class="panels">
+        <% @compliments.each do |c| %>
+            <li class="panel">
+                <%= c.body %>
+                <%= c.attribution %>
+            </li>
+        <% end %>
+    </ul>
+<% else %>
+    <p class="tagline">You don't have any compliments yet...but soon! ❤️</p>
+<% end%>

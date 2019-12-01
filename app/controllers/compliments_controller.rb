@@ -1,4 +1,5 @@
 class ComplimentsController < ApplicationController
+
     def create
         @person = Person.find(params[:person_id])
         @compliment = @person.compliments.create(compliment_params)

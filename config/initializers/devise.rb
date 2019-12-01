@@ -304,7 +304,8 @@ Devise.setup do |config|
       scope: 'userinfo.email, userinfo.profile, http://gdata.youtube.com',
       prompt: 'select_account',
       image_aspect_ratio: 'square',
-      image_size: 50
+      image_size: 50,
+      hd: "wearefuturegov.com"
     }
 
 end

@@ -1,7 +1,14 @@
 class PeopleController < ApplicationController
+
+
     def index
         @person = Person.order('RANDOM()').first
-        @compliments = @person.compliments
         @new_compliment = Compliment.new
     end
+
+    def me
+        @person = current_person
+        @compliments = @person.compliments
+    end
+
 end
