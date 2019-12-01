@@ -14,8 +14,8 @@
     <ul class="panels">
         <% @compliments.each do |c| %>
             <li class="panel">
-                <%= c.body %>
-                <%= c.attribution %>
+                <p><%= c.body %></p>
+                <small><%= c.attribution %></small>
             </li>
         <% end %>
     </ul>
